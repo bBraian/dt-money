@@ -1,15 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
 import { PriceHighLight, TransactionsContainer, TransactionsTable } from "./styles";
 
 export function Transactions() {
+    const [transactions, setTransactions] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:3000/transactions')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                setTransactions(data);
             })
     }, [])
 
@@ -23,32 +25,20 @@ export function Transactions() {
 
                 <TransactionsTable>
                     <tbody>
-                        <tr>
-                            <td width="40%">Desenvolvimento de site</td>
-                            <td>
-                                <PriceHighLight variant="income">
-                                    R$ 12.000,00
-                                </PriceHighLight>
-                            </td>
-                            <td>Venda</td>
-                            <td>13/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td width="40%">Hamburguer</td>
-                            <td>
-                                <PriceHighLight variant="outcome">
-                                - R$ 12.000,00
-                                </PriceHighLight>
-                            </td>
-                            <td>Alimentação</td>
-                            <td>10/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td width="40%">Desenvolvimento de site</td>
-                            <td>R$ 12.000,00</td>
-                            <td>Venda</td>
-                            <td>13/04/2022</td>
-                        </tr>
+                        {transactions.map(transaction => {
+                            return (
+                                <tr key={transaction.id}>
+                                    <td width="40%">{transaction.description}</td>
+                                    <td>
+                                        <PriceHighLight variant={transaction.type}>
+                                        {transaction.type == "outcome" && "-"} R$ {transaction.price}
+                                        </PriceHighLight>
+                                    </td>
+                                    <td>{transaction.category}</td>
+                                    <td>{transaction.createdAt}</td>
+                                </tr>
+                            )
+                        })}
                     </tbody>
                 </TransactionsTable>
             </TransactionsContainer>
