@@ -5,7 +5,7 @@
             "description": "Desenvolvimento de site",
             "type": "income",
             "category": "Venda",
-            "price": 140.00,
+            "price": 14000.00,
             "createdAt": "2022-09-30T15:31:38.424Z"
         },
         {
@@ -15,6 +15,14 @@
             "category": "Alimentação",
             "price": 28.00,
             "createdAt": "2022-09-30T15:31:38.424Z"
+        },
+        {
+            "id": 3,
+            "description": "Ignite",
+            "type": "outcome",
+            "category": "Estudos",
+            "price": 1500.00,
+            "createdAt": "2022-09-24T15:31:38.424Z"
         }
     ]
 }
