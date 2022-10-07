@@ -4,6 +4,13 @@
 
 ### This project was created with [Vite](https://vitejs.dev/)
 
+### Used in this project
+- Axios
+- Styled Components
+- React Hook Form
+- Zod
+- RadixUI
+
 ### About
 This application was developed while I was studying React in Rocketseat course.
 
