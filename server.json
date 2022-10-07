@@ -1,28 +1,52 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Desenvolvimento de site",
-            "type": "income",
-            "category": "Venda",
-            "price": 14000.00,
-            "createdAt": "2022-09-30T15:31:38.424Z"
-        },
-        {
-            "id": 2,
-            "description": "Hamburguer",
-            "type": "outcome",
-            "category": "Alimentação",
-            "price": 28.00,
-            "createdAt": "2022-09-30T15:31:38.424Z"
-        },
-        {
-            "id": 3,
-            "description": "Ignite",
-            "type": "outcome",
-            "category": "Estudos",
-            "price": 1500.00,
-            "createdAt": "2022-09-24T15:31:38.424Z"
-        }
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2022-09-30T15:31:38.424Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 28,
+      "createdAt": "2022-09-30T15:31:38.424Z"
+    },
+    {
+      "id": 3,
+      "description": "Ignite",
+      "type": "outcome",
+      "category": "Estudos",
+      "price": 1500,
+      "createdAt": "2022-09-24T15:31:38.424Z"
+    },
+    {
+      "description": "Desenvolvimento de App",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2022-10-06T22:11:59.065Z",
+      "id": 4
+    },
+    {
+      "description": "Café",
+      "price": 6,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-06T22:17:07.214Z",
+      "id": 5
+    },
+    {
+      "description": "Iogurte",
+      "price": 4,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-06T23:28:49.318Z",
+      "id": 6
+    }
+  ]
 }
