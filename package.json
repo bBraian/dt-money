@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "dev:server": "json-server server.json -w -d 400"
+    "dev:server": "json-server --host localhost server.json -w -d 400"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.8",

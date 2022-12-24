@@ -5,6 +5,7 @@ import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { dateFormatter, priceFormatter } from "../../utils/formatter";
 import { SearchForm } from "./components/SearchForm";
 import { PriceHighLight, TransactionsContainer, TransactionsTable } from "./styles";
+import { transactionsData } from "../../data/transactions";
 
 export function Transactions() {
     const transactions = useContextSelector(TransactionsContext, (context) => {
@@ -21,7 +22,7 @@ export function Transactions() {
 
                 <TransactionsTable>
                     <tbody>
-                        {transactions.map(transaction => {
+                        {transactionsData.map(transaction => {
                             return (
                                 <tr key={transaction.id}>
                                     <td width="40%">{transaction.description}</td>
